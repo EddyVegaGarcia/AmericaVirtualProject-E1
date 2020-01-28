@@ -11,4 +11,10 @@ public class Homero implements EmpleadoDeControl {
         this.donas = unaCantidadDonas;
 
     }
+
+    @Override
+    public Boolean estaDistraido() {
+        return false;
+    }
+
 }
