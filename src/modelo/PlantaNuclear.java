@@ -24,12 +24,6 @@ public class PlantaNuclear {
 
     }
 
-    public String revisionDePeligro() {
-
-        return NO_HAY_PELIGRO;
-
-    }
-
     public void horaDeAlmuerzo() {
 
         this.empleadoDeControl.almorzar();
@@ -41,4 +35,13 @@ public class PlantaNuclear {
         this.empleadoDeControl = new PatoBalancin();
 
     }
+
+    public String revisionDePeligro() {
+
+        this.dueño.estaPobre();
+
+        return NO_HAY_PELIGRO;
+
+    }
+
 }

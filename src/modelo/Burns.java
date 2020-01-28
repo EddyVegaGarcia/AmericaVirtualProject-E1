@@ -12,4 +12,9 @@ public class Burns {
 
     }
 
+    public void estaPobre() {
+
+        this.estadoBurns.estaPobre();
+
+    }
 }
