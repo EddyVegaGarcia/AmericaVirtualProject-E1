@@ -1,12 +1,15 @@
 package modelo;
 
-import modelo.interfaces.EstadoHomero;
+import modelo.exception.*;
+import modelo.interfaces.*;
 
 public class Distraido implements EstadoHomero {
 
     @Override
     public Boolean estaDistraido() {
-        return true;
+
+        throw new PosibleCasoEnPeligroException();
+
     }
 
     @Override
