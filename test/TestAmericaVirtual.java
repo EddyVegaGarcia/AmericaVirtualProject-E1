@@ -22,7 +22,7 @@ public class TestAmericaVirtual {
     @Test(expected = PlantaNuclearEnPeligroException.class)
     public void revisionDePeligroConBurnsPobreConHomeroConcentradoYCantidadDeUranioEstable(){
 
-        Burns burns = new Burns("Pobre");
+        Burns burns = new Burns(new Pobre);
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
@@ -50,7 +50,7 @@ public class TestAmericaVirtual {
     @Test(expected = PlantaNuclearEnPeligroException.class)
     public void revisionDePeligroConBurnsPobreConHomeroConcentradoYCantidadDeUranioInestable(){
 
-        Burns burns = new Burns("Pobre");
+        Burns burns = new Burns(new Pobre);
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
@@ -81,7 +81,7 @@ public class TestAmericaVirtual {
     @Test(expected = PlantaNuclearEnPeligroException.class)
     public void revisionDePeligroConBurnsPobreConHomeroDistraidoYCantidadDeUranioEstable(){
 
-        Burns burns = new Burns("Pobre");
+        Burns burns = new Burns(new Pobre);
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
@@ -113,7 +113,7 @@ public class TestAmericaVirtual {
     @Test(expected = PlantaNuclearEnPeligroException.class)
     public void revisionDePeligroConBurnsPobreConHomeroDistraidoYCantidadDeUranioInestable(){
 
-        Burns burns = new Burns("Pobre");
+        Burns burns = new Burns(new Pobre);
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
@@ -145,7 +145,7 @@ public class TestAmericaVirtual {
     @Test(expected = PlantaNuclearEnPeligroException.class)
     public void revisionDePeligroConBurnsPobreConPatoBalancinYCantidadDeUranioEstable(){
 
-        Burns burns = new Burns("Pobre");
+        Burns burns = new Burns(new Pobre);
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
@@ -177,7 +177,7 @@ public class TestAmericaVirtual {
     @Test(expected = PlantaNuclearEnPeligroException.class)
     public void revisionDePeligroConBurnsPobreConPatoBalancinYCantidadDeUranioInestable(){
 
-        Burns burns = new Burns("Pobre");
+        Burns burns = new Burns(new Pobre);
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
