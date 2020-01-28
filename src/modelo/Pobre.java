@@ -1,4 +1,6 @@
 package modelo;
 
-public class Pobre implements modelo.EstadoBurns {
+import modelo.interfaces.*;
+
+public class Pobre implements EstadoBurns {
 }

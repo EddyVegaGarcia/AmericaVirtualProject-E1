@@ -1,10 +1,12 @@
 package modelo;
 
+import modelo.interfaces.*;
+
 public class Burns {
 
-    modelo.EstadoBurns estadoBurns;
+    EstadoBurns estadoBurns;
 
-    public Burns(modelo.EstadoBurns unEstadoEconomico) {
+    public Burns(EstadoBurns unEstadoEconomico) {
 
         estadoBurns = unEstadoEconomico;
 

@@ -1,4 +1,6 @@
 package modelo;
 
-public class Rico implements modelo.EstadoBurns {
+import modelo.interfaces.*;
+
+public class Rico implements EstadoBurns {
 }
