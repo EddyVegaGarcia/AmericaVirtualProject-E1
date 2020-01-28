@@ -107,7 +107,7 @@ public class AmericaVirtualTest {
 
     }
 
-    @Test(expected = PlantaNuclearEnPeligroException.class)
+    @Test
     public void revisionDePeligroConBurnsRicoConPatoBalancinYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
