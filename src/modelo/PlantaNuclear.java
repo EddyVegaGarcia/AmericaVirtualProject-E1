@@ -24,4 +24,12 @@ public class PlantaNuclear {
         return NO_HAY_PELIGRO;
 
     }
+
+    public void horaDeAlmuerzo() {
+
+    }
+
+    public void despido() {
+
+    }
 }
