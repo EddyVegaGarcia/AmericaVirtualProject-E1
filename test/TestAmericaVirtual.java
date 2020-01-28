@@ -2,6 +2,7 @@
 import modelo.*;
 import org.junit.jupiter.api.Test;
 
+import static modelo.Constantes.*;
 import static org.junit.jupiter.api.Assertions.*;
 
 public class TestAmericaVirtual {
@@ -13,8 +14,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 9000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_ESTABLE);
 
         assertEquals("Todo bien. Yujuu!!", plantaNuclear.revisionDePeligro);
 
@@ -27,8 +27,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 9000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_ESTABLE);
 
         plantaNuclear.revisionDePeligro;
 
@@ -41,8 +40,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 10000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_INESTABLE);
 
         plantaNuclear.revisionDePeligro;
 
@@ -55,9 +53,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 10000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
-
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_INESTABLE);
 
         plantaNuclear.revisionDePeligro;
 
@@ -70,8 +66,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 9000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_ESTABLE);
 
         plantaNuclear.horaDeAlmuerzo();
 
@@ -86,8 +81,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 9000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_ESTABLE);
 
         plantaNuclear.horaDeAlmuerzo();
 
@@ -102,8 +96,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 10000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_INESTABLE);
 
         plantaNuclear.horaDeAlmuerzo();
 
@@ -118,8 +111,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 10000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_INESTABLE);
 
         plantaNuclear.horaDeAlmuerzo();
 
@@ -134,8 +126,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 9000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_ESTABLE);
 
         plantaNuclear.despido();
 
@@ -150,8 +141,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 9000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_ESTABLE);
 
         plantaNuclear.despido();
 
@@ -166,8 +156,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 10000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_INESTABLE);
 
         plantaNuclear.despido();
 
@@ -182,8 +171,7 @@ public class TestAmericaVirtual {
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
 
-        Integer cantidadDeUranioEstable = 10000;
-        plantaNuclear.agregarUranio(cantidadDeUranioEstable);
+        plantaNuclear.agregarUranio(CANTIDAD_URANIO_INESTABLE);
 
         plantaNuclear.despido();
 
