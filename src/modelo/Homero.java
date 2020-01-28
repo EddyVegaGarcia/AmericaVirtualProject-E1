@@ -1,5 +1,6 @@
 package modelo;
 
+import modelo.exception.*;
 import modelo.interfaces.*;
 
 import static modelo.Constantes.*;
@@ -37,7 +38,9 @@ public class Homero implements EmpleadoDeControl {
 
     @Override
     public Boolean estaDistraido() {
+
         return estadoHomero.estaDistraido();
+
     }
 
     @Override
@@ -46,6 +49,21 @@ public class Homero implements EmpleadoDeControl {
         this.estadoHomero.cambio(this);
         this.comprarDona(CANTIDAD_DONAS_AL_COMPRAR);
         this.comerDona();
+
+    }
+
+    @Override
+    public void monitorear(PlantaNuclear unaPlantaNuclear) {
+
+        try{
+
+            this.estaDistraido();
+
+        }catch (PosibleCasoEnPeligroException e){
+
+            unaPlantaNuclear.posibleCasoEnPeligro();
+
+        }
 
     }
 }
