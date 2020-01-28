@@ -18,7 +18,7 @@ public class AmericaVirtualTest {
 
         plantaNuclear.agregarUranio(CANTIDAD_URANIO_ESTABLE);
 
-        assertEquals("Todo bien. Yujuu!!", (plantaNuclear.revisionDePeligro()));
+        assertEquals("Todo bien. Yujuu!!", plantaNuclear.revisionDePeligro());
 
     }
 
@@ -33,14 +33,14 @@ public class AmericaVirtualTest {
 
     }
 
-    @Test(expected = PlantaNuclearEnPeligroException.class)
+    @Test
     public void revisionDePeligroConBurnsRicoConHomeroConcentradoYCantidadDeUranioInestable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
 
         plantaNuclear.agregarUranio(CANTIDAD_URANIO_INESTABLE);
 
-        plantaNuclear.revisionDePeligro();
+        assertEquals("Todo bien. Yujuu!!", plantaNuclear.revisionDePeligro());
 
     }
 
@@ -55,7 +55,7 @@ public class AmericaVirtualTest {
 
     }
 
-    @Test(expected = PlantaNuclearEnPeligroException.class)
+    @Test
     public void revisionDePeligroConBurnsRicoConHomeroDistraidoYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
@@ -64,7 +64,7 @@ public class AmericaVirtualTest {
 
         plantaNuclear.horaDeAlmuerzo();
 
-        plantaNuclear.revisionDePeligro();
+        assertEquals("Todo bien. Yujuu!!", plantaNuclear.revisionDePeligro());
 
     }
 
@@ -116,7 +116,7 @@ public class AmericaVirtualTest {
 
         plantaNuclear.despido();
 
-        plantaNuclear.revisionDePeligro();
+        assertEquals("Todo bien. Yujuu!!", plantaNuclear.revisionDePeligro());
 
     }
 
