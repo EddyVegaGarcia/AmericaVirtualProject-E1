@@ -1,5 +1,6 @@
 package modelo;
 
+import modelo.exception.PlantaNuclearEnPeligroException;
 import modelo.interfaces.*;
 
 import static modelo.Constantes.*;
@@ -7,14 +8,26 @@ import static modelo.Constantes.*;
 public class PlantaNuclear {
 
     EmpleadoDeControl empleadoDeControl;
-    public modelo.Burns dueño;
+    public modelo.Burns duenio;
     public Integer cantidadDeUranio;
+
+    private void monitorearEconomiaDuenio() {
+
+        this.duenio.estaPobre();
+
+    }
+
+    private void monitorearRecursos() {
+
+        this.empleadoDeControl.monitorear(this);
+
+    }
 
     public PlantaNuclear(Burns unDueño) {
 
         cantidadDeUranio = CANTIDAD_URANIO_INICIAL;
         this.empleadoDeControl = new Homero(CANTIDAD_DONAS_INICIALES);
-        this.dueño = unDueño;
+        this.duenio = unDueño;
 
     }
 
@@ -36,12 +49,17 @@ public class PlantaNuclear {
 
     }
 
-    public String revisionDePeligro() {
+    public void posibleCasoEnPeligro() {
 
-        this.dueño.estaPobre();
-
-        return NO_HAY_PELIGRO;
+        if(cantidadDeUranio >= CANTIDAD_URANIO_INESTABLE) throw new PlantaNuclearEnPeligroException();
 
     }
 
+    public String revisionDePeligro() {
+
+        this.monitorearEconomiaDuenio();
+        this.monitorearRecursos();
+        return NO_HAY_PELIGRO;
+
+    }
 }
