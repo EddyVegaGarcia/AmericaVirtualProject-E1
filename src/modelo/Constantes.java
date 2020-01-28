@@ -9,5 +9,7 @@ public class Constantes {
     public static String NO_HAY_PELIGRO = "Todo bien. Yujuu!!";
 
     public static Integer CANTIDAD_DONAS_INICIALES = 5;
+    public static Integer CANTIDAD_DONAS_AL_COMPRAR = 1;
+    public static Integer CANTIDAD_DONAS_AL_COMER = 3;
 
 }
