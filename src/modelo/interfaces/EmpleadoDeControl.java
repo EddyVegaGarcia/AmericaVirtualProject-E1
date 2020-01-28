@@ -4,4 +4,6 @@ public interface EmpleadoDeControl {
 
     Boolean estaDistraido();
 
+    void almorzar();
+
 }

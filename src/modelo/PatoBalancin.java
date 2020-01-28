@@ -8,4 +8,9 @@ public class PatoBalancin implements EmpleadoDeControl {
     public Boolean estaDistraido() {
         return true;
     }
+
+    @Override
+    public void almorzar() {
+
+    }
 }
