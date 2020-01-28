@@ -1,22 +1,25 @@
 package modelo;
 
+import modelo.interfaces.*;
+
 import static modelo.Constantes.*;
 
 public class PlantaNuclear {
 
-    modelo.EmpleadoDeControl empleadoDeControl;
+    EmpleadoDeControl empleadoDeControl;
     public modelo.Burns dueño;
-    public Integer cantidadDeUranio = CANTIDAD_URANIO_INICIAL;
+    public Integer cantidadDeUranio;
 
-    public PlantaNuclear(modelo.Burns unDueño) {
+    public PlantaNuclear(Burns unDueño) {
 
+        cantidadDeUranio = CANTIDAD_URANIO_INICIAL;
+        this.empleadoDeControl = new Homero(CANTIDAD_DONAS_INICIALES);
         this.dueño = unDueño;
 
     }
 
     public void agregarUranio(Integer unaCantidadDeUranio) {
 
-        this.empleadoDeControl = new Homero();
         this.cantidadDeUranio += unaCantidadDeUranio;
 
     }
@@ -28,6 +31,8 @@ public class PlantaNuclear {
     }
 
     public void horaDeAlmuerzo() {
+
+        this.empleadoDeControl.almorzar();
 
     }
 
