@@ -4,10 +4,11 @@ import static modelo.Constantes.*;
 
 public class PlantaNuclear {
 
-    public Burns dueño;
+    modelo.EmpleadoDeControl empleadoDeControl;
+    public modelo.Burns dueño;
     public Integer cantidadDeUranio = CANTIDAD_URANIO_INICIAL;
 
-    public PlantaNuclear(Burns unDueño) {
+    public PlantaNuclear(modelo.Burns unDueño) {
 
         this.dueño = unDueño;
 
@@ -15,6 +16,7 @@ public class PlantaNuclear {
 
     public void agregarUranio(Integer unaCantidadDeUranio) {
 
+        this.empleadoDeControl = new Homero();
         this.cantidadDeUranio += unaCantidadDeUranio;
 
     }
@@ -30,6 +32,8 @@ public class PlantaNuclear {
     }
 
     public void despido() {
+
+        this.empleadoDeControl = new PatoBalancin();
 
     }
 }

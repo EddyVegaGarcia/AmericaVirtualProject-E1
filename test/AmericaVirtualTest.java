@@ -1,6 +1,9 @@
 
-import modelo.*;
-import modelo.exception.*;
+import modelo.Burns;
+import modelo.PlantaNuclear;
+import modelo.Pobre;
+import modelo.Rico;
+import modelo.exception.PlantaNuclearEnPeligroException;
 import org.junit.Test;
 
 import static modelo.Constantes.*;

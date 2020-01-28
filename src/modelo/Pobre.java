@@ -1,4 +1,4 @@
 package modelo;
 
-public class Pobre implements EstadoBurns {
+public class Pobre implements modelo.EstadoBurns {
 }

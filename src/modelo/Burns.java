@@ -2,9 +2,9 @@ package modelo;
 
 public class Burns {
 
-    EstadoBurns estadoBurns;
+    modelo.EstadoBurns estadoBurns;
 
-    public Burns(EstadoBurns unEstadoEconomico) {
+    public Burns(modelo.EstadoBurns unEstadoEconomico) {
 
         estadoBurns = unEstadoEconomico;
 

@@ -1,4 +1,4 @@
 package modelo;
 
-public class Rico implements EstadoBurns {
+public class Rico implements modelo.EstadoBurns {
 }
