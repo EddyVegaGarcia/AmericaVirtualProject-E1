@@ -3,26 +3,22 @@ import modelo.*;
 import modelo.exception.*;
 import org.junit.Test;
 
-
 import static modelo.Constantes.*;
 import static org.junit.Assert.assertEquals;
-//import static org.junit.jupiter.api.Assertions.*;
 
-public class TestAmericaVirtual {
+public class AmericaVirtualTest {
 
     @Test
     public void revisionDePeligroConBurnsRicoConHomeroConcentradoYCantidadDeUranioEstable(){
 
-        Burns burns = new Burns(new Rico());
-
-        PlantaNuclear plantaNuclear = new PlantaNuclear(burns);
+        PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
 
         plantaNuclear.agregarUranio(CANTIDAD_URANIO_ESTABLE);
 
-        //assertEquals("Todo bien. Yujuu!!", (plantaNuclear.revisionDePeligro()));
+        assertEquals("Todo bien. Yujuu!!", (plantaNuclear.revisionDePeligro()));
 
     }
-/*
+
     @Test(expected = PlantaNuclearEnPeligroException.class)
     public void revisionDePeligroConBurnsPobreConHomeroConcentradoYCantidadDeUranioEstable(){
 
@@ -108,7 +104,7 @@ public class TestAmericaVirtual {
 
     }
 
-    @Test
+    @Test(expected = PlantaNuclearEnPeligroException.class)
     public void revisionDePeligroConBurnsRicoConPatoBalancinYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
@@ -159,5 +155,5 @@ public class TestAmericaVirtual {
         plantaNuclear.revisionDePeligro();
 
     }
-*/
+
 }
