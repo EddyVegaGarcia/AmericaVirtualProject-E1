@@ -2,53 +2,84 @@
 
 ## Descripción
 
--   
+-   **Se necesita implementar (en código) la funcionalidad** para saber si una planta está en peligro, especificandoen qué clase se debería el método.
 
-    > Marca: Peugeot // Modelo: 206 // Puertas: 4 // Precio: $200.000,00
+    `public String revisionDePeligro()`
     
-    > Vehículo que contiene en el modelo la letra ‘Y’: Yamaha YBR $80.500,50
+-   La planta está en peligro cuando la cantidad de barras de uranio que hay es mayor a 10000 y el empleado de la sala de control está distraído, o independientmente de lo anterior, si Mr. Burns se quedó pobre.
+
+    >cantidadUranio > 10000 ^ empleadoControl.estaDistraido() || Burns.estaPobre()
+
+-   Sabemos que Homero el encargado de la sala de control puede ser reemplazado por el pato balancín.
+
+    `public void despido()`
     
--   También visualización de los vehículos de mayor a menor precio de la forma:
-    
-    > Peugeot 208
-    
+-   Con el siguiente diagrama de clases:
+
+    ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/AmericaVirtualUML.png)
 
 ## Solución del programa
 
 -   JDK 8: Herramienta utilizada para el desarrollo de la solución del programa.
+
+-   JUnit 4.12: Herramienta utilizada para el desarrollo de test.
+
+-   Diseño de **Método ágiles**.
     
 -   Diseño de solución orientada a objetos.
     
 -   Diseño de contrato sin romper el concepto de **encapsulamiento**.
     
--   Diseño con una clase abstracta: _Vehicle_ y una interface: _Spec_ .
+-   Diseño con una clase interface: _EstadoBurns_ y otra de: _EstadoHomero_.
     
--   No hay ingreso por pantalla de ningún tipo.
+-   Como no se da todo la explicación, se asume que Homero puede cambiar de estar Concentrado a estar Distraido llendo a almorzar, que Pato Balancín siempre se encuentra Distraido, que Mr. Burns no cambia su riqueza por la compra de Uranio, solo cuando lo inicializan.
     
--   La lista de vehículos, lo ví conveniente cargarlo en el constructor de `Dealership` ya que tiene sentido que una concesionaria tiene su inventario de sus vehículos, y no tiene que haber un ingreso por pantalla de ningún tipo.
+-   Uso del patrón State para cambiar el estado de Homero de estar Concentrado a estar Distraido y así poder tener la herramienta de delegar implementación hací lo que nos piden que es ver si es una posible causa de peligro para la planta nuclear. De manera similar el caso de Mr. Burns con su estado económco.
+
+-   Nos facilitaban la interfaz EmpleadoControl lo cual nos orientaba a tener implementaciones separadas para cada empleado, pero mientras que en Mr. Burns faltaría implementar más.
     
--   El diseño de la impresión lo solucioné con la propiedad de POO que es **polimorfismo** con la interface _Sepc_ ya que los vehículos como tal no tienen el comportamiento de 'imprimir' sus especificaciones.
+-   Con el patrón double Dispatch se realizo las ordenes en vez de estar preguntando cada caso y así caer en la posibilidad de romper el encapsulamiento.
     
 
 ## Explicación del programa
 
--   Para la impresión de pantalla utilicé _String.format_ para definir cada atributo de manera adecuada y usar la herramienta de decimales `%,.2f` que me ayudó para que se visualice de esta manera:
+-   Nos piden que implementemos un método para saber si la planta nuclear está en peligro, esta clase es PlantaNuclear ya que ella tiene relación con ambos objetos que nos proporcionarán la posible causa de peligro.
+
+-   Para ser avisado sin tener que romper el encapsulamiento, osea estar preguntando y realizar alguna acción al respecto de la respuesta, implemento el lanzamiento de Exception para los casos donde puede ocurrir la causa de peligro. 
     
-    > $80.500,50
+    `public class PlantaNuclearEnPeligroException extends RuntimeException()`
     
--   Para realizar el ejercicio de mayor y menor precio en la lista de vehículos, lo resolví pensando en ordenarlo con la ayuda de la herramienta de `Sort` en la clases que heredan de `Comparable` y así obtener con seguridad el de mayor precio y, en caso contrario, el de menor precio, comparando uno a uno mandando mensajes de comparación sin romper el **encapsulamiento**.
+-   Tome como inicio la llamada a la economía de Mr. Burns ya que era independiente de las demás causas y lanzará la exception si su estado es estar pobre, en el caso contrario se llamará respectivamente al empleado según su estado, la cual lanzará una excepción si es una posible causa de peligro y la planta nuclear llamará a su propio método para ver si cumple con la causa faltante de ocacionar el peligro en la planta nuclear.
     
--   Se utilizó la herramienta de **herencia** de un nivel porque tanto los autos y motos heredan de vehículo, los hijos pueden llamar a sus atributos sin romper el **encapsulamiento**.
+    `public class PosibleCasoEnPeligroException extends RuntimeException()`
+
+-   Según lo que asumí quedaría que hay solo 4 casos donde el programa está bien y lanza el mensaje : "Todo bien. Yujuu!!", mientras que en los siguientes casos se lanza la exception.
     
 
 ## Diagrama UML
 
 - Diagrama de clases: 
 
-    ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/onreadyUML.png)
+    - Patrón State:
+    
+        - Estado Homero:
+
+            ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/StateHomeroUML.png)
+            
+        - Estado Burns:
+        
+            ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/StateBurnsUML.png)
+      
+- Diagrama de secuencia:
+
+    - Método revisionDePeligro:
+    
+        - Caso donde el empleado está distraido y la cantidad de Uranio es mayor de lo estable.
+        
+            ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/SecuenciaRevisionDePeligro.png)
 
 ## Desarrollador
 
 -   Tengo conocimientos de Git con lo cuál cree este respositorio y pude ir trabajando a la par con el desarrollo del programa.
     
--   Este trabajo puede desarrollarse desde un inicio con diseño **Unit Testing** con conceptos de **TDD** gracias a la herramienta de **Unix** para Java: `Junit`. 
+-   El proyecto pude desarrollarlo desde un inicio con diseño **Unit Testing** con conceptos de **TDD** gracias a la herramienta de **Unix** para Java: `Junit`. 
