@@ -24,7 +24,7 @@
 
 -   JUnit 4.12: Herramienta utilizada para el desarrollo de test.
 
--   Diseño de **Método ágiles**.
+-   Para este gestión de proyecto realice la metodología de trabajo de un proceso incremental la cuál es **Metodologías ágiles**.
     
 -   Diseño de solución orientada a objetos.
     
