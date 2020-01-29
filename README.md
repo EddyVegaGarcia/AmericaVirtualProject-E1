@@ -2,7 +2,7 @@
 
 ## Descripción
 
--   **Se necesita implementar (en código) la funcionalidad** para saber si una planta está en peligro, especificandoen qué clase se debería el método.
+-   **Se necesita implementar (en código) la funcionalidad** para saber si una planta está en peligro, especificando en qué clase se debería el método.
 
     `public String revisionDePeligro()`
     
@@ -30,11 +30,11 @@
     
 -   Diseño de contrato sin romper el concepto de **encapsulamiento**.
     
--   Diseño con una clase interface: _EstadoBurns_ y otra de: _EstadoHomero_.
+-   Diseño con las clases interface: _EstadoBurns_, _EstadoHomero_.
     
 -   Como no se da todo la explicación, se asume que Homero puede cambiar de estar Concentrado a estar Distraido llendo a almorzar, que Pato Balancín siempre se encuentra Distraido, que Mr. Burns no cambia su riqueza por la compra de Uranio, solo cuando lo inicializan.
     
--   Uso del patrón State para cambiar el estado de Homero de estar Concentrado a estar Distraido y así poder tener la herramienta de delegar implementación hací lo que nos piden que es ver si es una posible causa de peligro para la planta nuclear. De manera similar el caso de Mr. Burns con su estado económco.
+-   Uso del patrón State para cambiar el estado de Homero de estar Concentrado a estar Distraido y así poder tener la herramienta de delegar implementación hacia lo que nos piden que es ver si es una posible causa de peligro para la planta nuclear. De manera similar el caso de Mr. Burns con su estado económco.
 
 -   Nos facilitaban la interfaz EmpleadoControl lo cual nos orientaba a tener implementaciones separadas para cada empleado, pero mientras que en Mr. Burns faltaría implementar más.
     
