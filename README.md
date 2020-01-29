@@ -16,7 +16,7 @@
     
 -   Con el siguiente diagrama de clases:
 
-    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E1/blob/master/AmericaVirtualUML.png)
+    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E1/blob/master/AmericaVirtualUML-Ej1.png)
 
 ## Solución del programa
 
