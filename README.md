@@ -16,7 +16,7 @@
     
 -   Con el siguiente diagrama de clases:
 
-    ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/AmericaVirtualUML.png)
+    ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E1/blob/master/AmericaVirtualUML.png)
 
 ## Solución del programa
 
@@ -64,11 +64,11 @@
     
         - Estado Homero:
 
-            ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/StateHomeroUML.png)
+            ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E1/blob/master/StateHomeroUML.png)
             
         - Estado Burns:
         
-            ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/StateBurnsUML.png)
+            ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E1/blob/master/StateBurnsUML.png)
       
 - Diagrama de secuencia:
 
@@ -76,7 +76,7 @@
     
         - Caso donde el empleado está distraido y la cantidad de Uranio es mayor de lo estable.
         
-            ![](https://github.com/EddyVegaGarcia/OnreadyProject/blob/master/SecuenciaRevisionDePeligro.png)
+            ![](https://github.com/EddyVegaGarcia/AmericaVirtualProject-E1/blob/master/SecuenciaRevisionDePeligro.png)
 
 ## Desarrollador
 
