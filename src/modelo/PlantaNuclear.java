@@ -23,11 +23,11 @@ public class PlantaNuclear {
 
     }
 
-    public PlantaNuclear(Burns unDueño) {
+    public PlantaNuclear(Burns unDuenio) {
 
         cantidadDeUranio = CANTIDAD_URANIO_INICIAL;
         this.empleadoDeControl = new Homero(CANTIDAD_DONAS_INICIALES);
-        this.duenio = unDueño;
+        this.duenio = unDuenio;
 
     }
 
