@@ -8,7 +8,7 @@ import static modelo.Constantes.*;
 public class PlantaNuclear {
 
     EmpleadoDeControl empleadoDeControl;
-    public modelo.Burns duenio;
+    public Burns duenio;
     public Integer cantidadDeUranio;
 
     private void monitorearEconomiaDuenio() {
