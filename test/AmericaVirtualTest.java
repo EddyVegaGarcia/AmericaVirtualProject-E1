@@ -12,7 +12,7 @@ import static org.junit.Assert.assertEquals;
 public class AmericaVirtualTest {
 
     @Test
-    public void revisionDePeligroConBurnsRicoConHomeroConcentradoYCantidadDeUranioEstable(){
+    public void tesRevisionDePeligroConBurnsRicoConHomeroConcentradoYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
 
@@ -23,7 +23,7 @@ public class AmericaVirtualTest {
     }
 
     @Test(expected = PlantaNuclearEnPeligroException.class)
-    public void revisionDePeligroConBurnsPobreConHomeroConcentradoYCantidadDeUranioEstable(){
+    public void testRevisionDePeligroConBurnsPobreConHomeroConcentradoYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Pobre()));
 
@@ -34,7 +34,7 @@ public class AmericaVirtualTest {
     }
 
     @Test
-    public void revisionDePeligroConBurnsRicoConHomeroConcentradoYCantidadDeUranioInestable(){
+    public void testRevisionDePeligroConBurnsRicoConHomeroConcentradoYCantidadDeUranioInestable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
 
@@ -45,7 +45,7 @@ public class AmericaVirtualTest {
     }
 
     @Test(expected = PlantaNuclearEnPeligroException.class)
-    public void revisionDePeligroConBurnsPobreConHomeroConcentradoYCantidadDeUranioInestable(){
+    public void testRevisionDePeligroConBurnsPobreConHomeroConcentradoYCantidadDeUranioInestable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Pobre()));
 
@@ -56,7 +56,7 @@ public class AmericaVirtualTest {
     }
 
     @Test
-    public void revisionDePeligroConBurnsRicoConHomeroDistraidoYCantidadDeUranioEstable(){
+    public void testRevisionDePeligroConBurnsRicoConHomeroDistraidoYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
 
@@ -69,7 +69,7 @@ public class AmericaVirtualTest {
     }
 
     @Test(expected = PlantaNuclearEnPeligroException.class)
-    public void revisionDePeligroConBurnsPobreConHomeroDistraidoYCantidadDeUranioEstable(){
+    public void testRevisionDePeligroConBurnsPobreConHomeroDistraidoYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Pobre()));
 
@@ -82,7 +82,7 @@ public class AmericaVirtualTest {
     }
 
     @Test(expected = PlantaNuclearEnPeligroException.class)
-    public void revisionDePeligroConBurnsRicoConHomeroDistraidoYCantidadDeUranioInestable(){
+    public void testRevisionDePeligroConBurnsRicoConHomeroDistraidoYCantidadDeUranioInestable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
 
@@ -95,7 +95,7 @@ public class AmericaVirtualTest {
     }
 
     @Test(expected = PlantaNuclearEnPeligroException.class)
-    public void revisionDePeligroConBurnsPobreConHomeroDistraidoYCantidadDeUranioInestable(){
+    public void testRevisionDePeligroConBurnsPobreConHomeroDistraidoYCantidadDeUranioInestable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Pobre()));
 
@@ -108,7 +108,7 @@ public class AmericaVirtualTest {
     }
 
     @Test
-    public void revisionDePeligroConBurnsRicoConPatoBalancinYCantidadDeUranioEstable(){
+    public void testRevisionDePeligroConBurnsRicoConPatoBalancinYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
 
@@ -121,7 +121,7 @@ public class AmericaVirtualTest {
     }
 
     @Test(expected = PlantaNuclearEnPeligroException.class)
-    public void revisionDePeligroConBurnsPobreConPatoBalancinYCantidadDeUranioEstable(){
+    public void testRevisionDePeligroConBurnsPobreConPatoBalancinYCantidadDeUranioEstable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Pobre()));
 
@@ -134,7 +134,7 @@ public class AmericaVirtualTest {
     }
 
     @Test(expected = PlantaNuclearEnPeligroException.class)
-    public void revisionDePeligroConBurnsRicoConPatoBalancinYCantidadDeUranioInestable(){
+    public void testRevisionDePeligroConBurnsRicoConPatoBalancinYCantidadDeUranioInestable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Rico()));
 
@@ -147,7 +147,7 @@ public class AmericaVirtualTest {
     }
 
     @Test(expected = PlantaNuclearEnPeligroException.class)
-    public void revisionDePeligroConBurnsPobreConPatoBalancinYCantidadDeUranioInestable(){
+    public void testRevisionDePeligroConBurnsPobreConPatoBalancinYCantidadDeUranioInestable(){
 
         PlantaNuclear plantaNuclear = new PlantaNuclear(new Burns(new Pobre()));
 
